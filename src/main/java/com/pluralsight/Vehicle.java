@@ -44,20 +44,19 @@ public class Vehicle extends Asset {
         double value = super.getValue();
         double newValue;
         if (carAge < 3) {
-            newValue = value *(1.0 -(0.3 * carAge));
+            newValue = value *(1.0 -(0.03 * carAge));
         } else if (carAge <= 6) {
-            newValue = value * (1.0 -(0.6 * carAge));
+            newValue = value * (1.0 -(0.06 * carAge));
         } else if (carAge <= 10) {
             newValue = value * (1.0 - (0.10 * carAge));
         } else {
-            newValue = 1000.00;
+            newValue = 1000.0;
         }
 
         if (odometer > 100000 && (!makeModel.contains("honda") || !makeModel.contains("toyota"))) {
             newValue = newValue * 0.75;
         }
 
-
-        return super.getValue();
+        return newValue;
     }
 }

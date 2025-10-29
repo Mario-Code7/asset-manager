@@ -60,6 +60,6 @@ public class House extends Asset {
         } else {
             this.condition  = 4;
         }
-        return value + (0.25 * squareFoot);
+        return value + (0.25 * lotSize);
     }
 }
