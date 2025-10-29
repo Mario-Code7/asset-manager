@@ -28,7 +28,6 @@ public class Program {
 
         }
     }
-
     private static ArrayList<Asset> getAssets() {
         ArrayList<Asset> assetList = new ArrayList<>();
 
